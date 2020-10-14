@@ -1,0 +1,146 @@
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500;600&family=Lato:wght@700&display=swap");
+:root {
+  --color-text: #152415;
+  --color-btns: #fff;
+  --color-calc: #f1f1f1;
+  --color-bg: #ecf4f3;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+@media only screen and (max-width: 23em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+}
+
+.calculator {
+  margin: 7.5rem auto 0;
+  -webkit-box-shadow: 0 2rem 4rem 0 rgba(0, 0, 0, 0.6);
+          box-shadow: 0 2rem 4rem 0 rgba(0, 0, 0, 0.6);
+  height: 57.5rem;
+  width: 35rem;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  -ms-grid-rows: 10rem (1fr)[5];
+      grid-template-rows: 10rem repeat(5, 1fr);
+}
+
+.calculator > * {
+  font-family: 'Lato', sans-serif;
+  background-color: var(--color-btns);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 2.5rem;
+  cursor: pointer;
+  -webkit-transition: all .1s;
+  transition: all .1s;
+}
+
+.calc {
+  font-family: 'IBM Plex Sans', sans-serif;
+  grid-column: span 4;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1 / 2;
+  font-size: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: var(--color-calc);
+}
+
+.calc > * {
+  width: 100%;
+  height: 50%;
+  text-align: right;
+}
+
+.container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.container > * {
+  position: absolute;
+  text-align: right;
+}
+
+.topN {
+  font-size: 2.5rem;
+  color: #999;
+}
+
+.bottomN, .lastNum {
+  font-size: 3.5rem;
+}
+
+.equal {
+  background-color: #ee6f57;
+  grid-column: span 2;
+}
+
+.equal:hover {
+  -webkit-filter: brightness(1);
+          filter: brightness(1);
+}
+
+.mode {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  width: 5rem;
+  -webkit-filter: grayscale(5);
+          filter: grayscale(5);
+  cursor: pointer;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+}
+
+.active {
+  -webkit-filter: none;
+          filter: none;
+}
+/*# sourceMappingURL=main.css.map */
